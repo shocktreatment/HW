@@ -174,7 +174,9 @@ img {
     /* background-color: var(--background); */
     max-width: 1600px;
     margin: 0 auto;
-    background-image: url(../images/Img.jpg), linear-gradient(#C4C4C4, #C4C4C4);
+    background-image: url();
+    /* background-image: url(../images/Img.jpg), linear-gradient(#2F303A66, #2F303A66); */
+    background-image: linear-gradient(#2F303A66, #2F303A66), url(../images/Img.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -279,8 +281,8 @@ img {
     margin-right: 30px;
 }
 .team-info {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .team-title {
     font-weight: 500;
@@ -297,6 +299,7 @@ img {
     line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 16px;
     
 
     color: var(--other-row-color);
@@ -304,7 +307,6 @@ img {
 .team-soc-list {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
 }
 .team-soc-item:not(:last-child) {
     margin-right: 10px;
@@ -321,7 +323,8 @@ img {
 .team-soc-icon {
     fill: currentColor;
 }
-.team-soc-link:hover {
+.team-soc-link:hover,
+.team-soc-link:focus {
     background-color: var(--accent-color);
     color: #FFFFFF;
 }
@@ -352,10 +355,12 @@ img {
 .clients-link {
     width: 170px;
     height: 92px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
-    padding: 16px 32px;
+    
     color: var(--icon-color)
 }
 .clients-icon {
@@ -377,6 +382,7 @@ img {
 }
 .footer-container {
     display: flex;
+    align-items: baseline;
 }
 .logo-footer {
     font-family: 'Raleway', sans-serif;
@@ -417,7 +423,7 @@ img {
 }
 
 .soc-network {
-    padding: 12px 0px 0px 70px;
+    margin-left: 70px;
 }
 .soc-network-title {
     font-weight: 700;
@@ -450,7 +456,8 @@ img {
     background: rgba(255, 255, 255, 0.1);
     color: #AFB1B8;
 }
-.soc-network-link:hover {
+.soc-network-link:hover,
+.soc-network-link:focus {
     background-color: var(--accent-color);
     color: #fff;
 }
@@ -497,12 +504,19 @@ img {
 
     gap: 30px;
 }
+.projects-link {
+    display: block;
+}
+.projects-link:hover,
+.projects-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .projects-item {
     flex-basis: 370px;
     /* width: 370px; */
     /* margin: 15px; */
     /* width: calc((100% - 60px) / 3); */
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    
 }
 .projects-text {
    padding: 20px 24px;
